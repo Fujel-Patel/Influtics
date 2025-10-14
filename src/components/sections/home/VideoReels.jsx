@@ -98,7 +98,7 @@ export default function VideoReels() {
                     {/* Facebook button inside image at bottom */}
                     <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex items-center gap-0.5 bg-white/90 backdrop-blur-sm border border-gray-200 px-4 py-2 rounded-full shadow-md hover:bg-white transition-all duration-200 z-10">
                       <Image
-                        src="/images/socialstats/facebook.png"
+                        src="/images/socialstat/facebook.png"
                         alt="Facebook"
                         width={20}
                         height={20}
