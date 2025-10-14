@@ -1,26 +1,186 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
+  /* Custom CSS Variables */
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --color-brand-pink: #ec4899;
+    --color-brand-orange: #f97316;
+    --font-poppins: 'Poppins', sans-serif;
+    --radius: 0.5rem;
+  }
+
+  /* Base Styles */
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: var(--font-family-sans);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html {
+    scroll-behavior: smooth;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer components {
+  /* Container - Using Tailwind's built-in responsive behavior */
+  .container {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Custom Button Gradient - Responsive padding */
+  .btn-gradient {
+    @apply bg-gradient-to-r from-pink-500 to-orange-500 text-white font-semibold px-6 py-3 rounded-full inline-flex items-center gap-2 border-0 cursor-pointer transition-all duration-300 ease-in-out;
+  }
+
+  .btn-gradient:hover {
+    @apply shadow-lg shadow-pink-500/40 -translate-y-0.5;
+  }
+
+  /* Responsive button sizing */
+  @media (min-width: 640px) {
+    .btn-gradient {
+      @apply px-8 py-4 text-base;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .btn-gradient {
+      @apply px-10 py-4 text-lg;
+    }
+  }
+
+  /* Card Styles - Responsive shadow and padding */
+  .card {
+    @apply bg-white rounded-xl shadow-md transition-all duration-300 ease-in-out p-6;
+  }
+
+  .card:hover {
+    @apply shadow-lg shadow-gray-500/20 -translate-y-2;
+  }
+
+  /* Responsive card padding */
+  @media (min-width: 768px) {
+    .card {
+      @apply p-8;
+    }
+  }
+
+  /* Utility Classes - Enhanced responsive padding */
+  .section-padding {
+    @apply py-20;
+  }
+
+  @media (min-width: 768px) {
+    .section-padding {
+      @apply py-24;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .section-padding {
+      @apply py-32;
+    }
+  }
+}
+
+@layer utilities {
+  /* Gradient Text */
+  .text-gradient {
+    @apply bg-gradient-to-r from-pink-500 to-orange-500 bg-clip-text text-transparent;
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f1f5f9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, #ec4899, #f97316);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    opacity: 0.8;
+  }
+
+  /* Backdrop Blur Fix for Safari */
+  @supports (backdrop-filter: blur(10px)) {
+    .backdrop-blur-sm {
+      backdrop-filter: blur(4px);
+    }
+    
+    .backdrop-blur {
+      backdrop-filter: blur(8px);
+    }
+  }
+}
+
+/* Animations */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation Classes */
+.animate-fade-in {
+  animation: fade-in 0.6s ease-out;
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+  opacity: 0;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 1s ease-out forwards;
 }

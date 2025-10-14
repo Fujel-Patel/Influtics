@@ -1,0 +1,42 @@
+// Mock data for blog posts.
+export const blogPosts = [
+  {
+    id: 1,
+    slug: 'my-top-5-travel-destinations-in-india',
+    title: 'My Top 5 Travel Destinations in India for 2026',
+    excerpt: 'From the serene backwaters of Kerala to the majestic mountains of Himachal, here are my must-visit places in India for the upcoming year.',
+    content: `<p>India is a land of incredible diversity, and picking just five spots is a challenge! But after much thought, here are the places that have captured my heart...</p>... (full blog content in HTML or Markdown) ...`,
+    author: 'Influtics',
+    date: '2025-10-08',
+    image: '/images/blog/post-1.jpg',
+    category: 'Travel',
+    tags: ['india', 'travel', 'tourism', 'destinations'],
+    readingTime: 5, // in minutes
+  },
+  {
+    id: 2,
+    slug: 'a-guide-to-ethical-influencer-marketing',
+    title: 'A Guide to Ethical Influencer Marketing',
+    excerpt: 'In a world of sponsored posts, authenticity is key. Let\'s talk about how brands and influencers can work together ethically and transparently.',
+    content: `<p>Authenticity isn't just a buzzword; it's the foundation of a successful and sustainable career as a content creator...</p>... (full blog content in HTML or Markdown) ...`,
+    author: 'Influtics',
+    date: '2025-09-22',
+    image: '/images/blog/post-2.jpg',
+    category: 'Marketing',
+    tags: ['influencer', 'marketing', 'ethics', 'branding'],
+    readingTime: 7,
+  },
+  {
+    id: 3,
+    slug: 'the-perfect-skincare-routine-for-indian-weather',
+    title: 'The Perfect Skincare Routine for Indian Weather',
+    excerpt: 'Dealing with humidity, heat, and pollution can be tough on your skin. Here’s a tried-and-tested routine that works wonders.',
+    content: `<p>Finding the right skincare products is a journey. For the Indian climate, I've found that a "less is more" approach often works best...</p>... (full blog content in HTML or Markdown) ...`,
+    author: 'Influtics',
+    date: '2025-09-05',
+    image: '/images/blog/post-3.jpg',
+    category: 'Lifestyle',
+    tags: ['skincare', 'beauty', 'lifestyle', 'india'],
+    readingTime: 4,
+  },
+];

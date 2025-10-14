@@ -1,0 +1,177 @@
+influtics-website/
+├── public/
+│   ├── images/
+│   │   ├── hero/
+│   │   │   ├── profile.jpg
+│   │   │   └── background-pattern.svg
+│   │   ├── about/
+│   │   │   ├── about-me.jpg
+│   │   │   └── signature.png
+│   │   ├── services/
+│   │   │   ├── collaboration.jpg
+│   │   │   ├── content-creation.jpg
+│   │   │   └── social-media.jpg
+│   │   ├── blog/
+│   │   │   ├── post-1.jpg
+│   │   │   ├── post-2.jpg
+│   │   │   └── post-3.jpg
+│   │   ├── contact/
+│   │   │   └── contact-girl.jpg
+│   │   └── instagram/
+│   │       ├── insta-1.jpg
+│   │       ├── insta-2.jpg
+│   │       ├── insta-3.jpg
+│   │       └── insta-4.jpg
+│   ├── videos/
+│   │   ├── reels/
+│   │   │   ├── reel-1.mp4
+│   │   │   ├── reel-2.mp4
+│   │   │   ├── reel-3.mp4
+│   │   │   └── reel-4.mp4
+│   │   └── premium/
+│   │       ├── premium-1.mp4
+│   │       ├── premium-2.mp4
+│   │       └── premium-3.mp4
+│   ├── icons/
+│   │   ├── favicon.ico
+│   │   ├── apple-touch-icon.png
+│   │   └── android-chrome-192x192.png
+│   ├── logo.svg
+│   ├── robots.txt
+│   └── sitemap.xml
+│
+├── src/
+│   ├── app/
+│   │   ├── (routes)/
+│   │   │   ├── about/
+│   │   │   │   ├── page.jsx
+│   │   │   │   └── loading.jsx
+│   │   │   ├── streaming-videos/
+│   │   │   │   ├── page.jsx
+│   │   │   │   └── loading.jsx
+│   │   │   ├── pages/
+│   │   │   │   ├── page.jsx
+│   │   │   │   └── loading.jsx
+│   │   │   ├── blog/
+│   │   │   │   ├── page.jsx
+│   │   │   │   ├── [slug]/
+│   │   │   │   │   └── page.jsx
+│   │   │   │   └── loading.jsx
+│   │   │   └── contact/
+│   │   │       ├── page.jsx
+│   │   │       └── loading.jsx
+│   │   ├── api/
+│   │   │   ├── contact/
+│   │   │   │   └── route.js
+│   │   │   ├── newsletter/
+│   │   │   │   └── route.js
+│   │   │   └── videos/
+│   │   │       └── route.js
+│   │   ├── fonts/
+│   │   │   ├── poppins-regular.woff2
+│   │   │   ├── poppins-medium.woff2
+│   │   │   ├── poppins-semibold.woff2
+│   │   │   └── poppins-bold.woff2
+│   │   ├── layout.jsx
+│   │   ├── page.jsx
+│   │   ├── loading.jsx
+│   │   ├── error.jsx
+│   │   ├── not-found.jsx
+│   │   └── globals.css
+│   │
+│   ├── components/
+│   │   ├── layout/
+│   │   │   ├── Navbar.jsx
+│   │   │   ├── Footer.jsx
+│   │   │   ├── Header.jsx
+│   │   │   └── MobileMenu.jsx
+│   │   ├── sections/
+│   │   │   ├── home/
+│   │   │   │   ├── HeroSection.jsx
+│   │   │   │   ├── SocialStats.jsx
+│   │   │   │   ├── VideoReels.jsx
+│   │   │   │   ├── ServicesSection.jsx
+│   │   │   │   ├── AboutSection.jsx
+│   │   │   │   ├── UpcomingLives.jsx
+│   │   │   │   ├── PremiumVideos.jsx
+│   │   │   │   ├── ContactFormSection.jsx
+│   │   │   │   └── BlogSection.jsx
+│   │   │   ├── about/
+│   │   │   │   ├── AboutHero.jsx
+│   │   │   │   ├── AboutStory.jsx
+│   │   │   │   ├── Achievements.jsx
+│   │   │   │   └── Skills.jsx
+│   │   │   ├── blog/
+│   │   │   │   ├── BlogGrid.jsx
+│   │   │   │   ├── BlogCard.jsx
+│   │   │   │   ├── BlogSidebar.jsx
+│   │   │   │   └── BlogPost.jsx
+│   │   │   └── contact/
+│   │   │       ├── ContactHero.jsx
+│   │   │       ├── ContactInfo.jsx
+│   │   │       └── ContactMap.jsx
+│   │   ├── ui/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Card.jsx
+│   │   │   ├── Input.jsx
+│   │   │   ├── Textarea.jsx
+│   │   │   ├── Badge.jsx
+│   │   │   ├── Modal.jsx
+│   │   │   ├── Dropdown.jsx
+│   │   │   ├── Tabs.jsx
+│   │   │   ├── Accordion.jsx
+│   │   │   └── Loader.jsx
+│   │   ├── common/
+│   │   │   ├── SectionTitle.jsx
+│   │   │   ├── GradientText.jsx
+│   │   │   ├── VideoPlayer.jsx
+│   │   │   ├── ImageGallery.jsx
+│   │   │   ├── SocialIcons.jsx
+│   │   │   ├── Newsletter.jsx
+│   │   │   ├── Breadcrumb.jsx
+│   │   │   ├── BackToTop.jsx
+│   │   │   └── ShareButtons.jsx
+│   │   └── forms/
+│   │       ├── ContactForm.jsx
+│   │       ├── NewsletterForm.jsx
+│   │       ├── CommentForm.jsx
+│   │       └── SearchForm.jsx
+│   │
+│   ├── lib/
+│   │   ├── utils.js
+│   │   ├── constants.js
+│   │   ├── api.js
+│   │   └── helpers.js
+│   │
+│   ├── hooks/
+│   │   ├── useScroll.js
+│   │   ├── useWindowSize.js
+│   │   ├── useIntersection.js
+│   │   └── useLocalStorage.js
+│   │
+│   ├── context/
+│   │   ├── ThemeContext.jsx
+│   │   └── AppContext.jsx
+│   │
+│   ├── data/
+│   │   ├── navLinks.js
+│   │   ├── socialPlatforms.js
+│   │   ├── services.js
+│   │   ├── videos.js
+│   │   ├── blogPosts.js
+│   │   └── testimonials.js
+│   │
+│   └── styles/
+│       └── animations.css
+│
+├── .env.local
+├── .env.example
+├── .gitignore
+├── .eslintrc.json
+├── next.config.js
+├── postcss.config.js
+├── tailwind.config.js
+├── package.json
+├── package-lock.json
+├── jsconfig.json
+└── README.md
