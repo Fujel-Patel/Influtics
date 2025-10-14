@@ -6,25 +6,25 @@ const AboutHero = () => {
   const socialIcons = [
     {
       name: 'Facebook',
-      src: '/images/socialstats/facebook.png',
+      src: '/images/socialstat/facebook.png',
       position: 'top-[10%] left-[5%] md:top-[20%] md:left-[15%]',
       animation: 'animate-float1',
     },
     {
       name: 'Instagram',
-      src: '/images/socialstats/instagram.png',
+      src: '/images/socialstat/instagram.png',
       position: 'bottom-[10%] left-[8%] md:bottom-[20%] md:left-[25%]',
       animation: 'animate-float2',
     },
     {
       name: 'TikTok',
-      src: '/images/socialstats/tiktok.png',
+      src: '/images/socialstat/tiktok.png',
       position: 'bottom-[12%] right-[5%] md:bottom-[25%] md:right-[15%]',
       animation: 'animate-float3',
     },
     {
       name: 'YouTube',
-      src: '/images/socialstats/youtube.png',
+      src: '/images/socialstat/youtube.png',
       position: 'top-[12%] right-[8%] md:top-[30%] md:right-[20%]',
       animation: 'animate-float4',
     },
@@ -74,11 +74,11 @@ const AboutHero = () => {
       </style>
 
       {/* Hero Section Container */}
-      <div className="relative w-full min-h-[60vh] sm:min-h-[65vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <div className="relative w-full min-h-[30vh] sm:min-h-[65vh] md:min-h-[70vh] flex items-center justify-center overflow-hidden">
         
         {/* Background Image */}
         <div
-          className="absolute inset-0 bg-cover bg-center z-0"
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0  opacity-80"
           style={{ backgroundImage: 'url(/about/lady.png)' }}
         ></div>
 
